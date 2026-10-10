@@ -1,0 +1,70 @@
+.central-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    margin-top: 2rem;
+    object-fit: contain;
+}
+
+.central-logo > img {
+    width: 12rem;
+    height: 12rem;
+}
+
+.title {
+    font-size: 2.8rem;
+    max-width: 50%;
+    text-align: center;
+    margin: 2rem 0rem;
+    align-self: center;
+}
+
+.servicesBtn {
+    width: 10rem;
+    padding: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: bolder;
+    align-self: center;
+    border: 2px solid var(--text-secondary);
+    border-radius: 16px;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.5s;
+}
+
+.servicesBtn:hover {
+    background-color: var(--text-secondary);
+    color: var(--text-primary);
+    transform: scale(1.05);
+}
+
+.effect {
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    box-shadow: 0 0 20rem 13rem var(--text-secondary);
+}
+
+@media (max-width: 1280px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .effect {
+        box-shadow: 0 0 20rem 9rem var(--text-secondary);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1rem;
+    }
+}

@@ -2,7 +2,10 @@
 
 :root {
     --text-primary: #ffffff;
+    --text-secondary: #7ca78d;
     --bg-color: #020919;
+    --navbar-bg: #02071a;
+    --navbar-border: #0d1526;
 }
 
 * {
@@ -13,9 +16,49 @@
     color: var(--text-primary);
 }
 
-.container {
+.global-container {
+    display: flex;
+    flex-direction: column;
     width: 100dvw;
-    height: 100dvh;
+    height: 100vh;
     position: relative;
+    overflow: hidden;
     background-color: var(--bg-color);
+}
+
+.global-container .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 6rem;
+    border-bottom: 2px solid var(--navbar-border);
+    background-color: var(--navbar-bg);
+}
+
+.global-container .navbar .navbar-logo {
+    width: 8.5rem;
+    height: 3rem;
+    position: relative;
+}
+
+.global-container .navbar .navbar-logo > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.global-container .navbar .items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.global-container .navbar .items .option {
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.global-container .navbar .items .option.active {
+    color: var(--text-secondary);
 }
