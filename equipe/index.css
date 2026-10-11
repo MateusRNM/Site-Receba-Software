@@ -1,0 +1,44 @@
+.team-box {
+    display: flex;
+    margin: auto;
+    gap: 2rem;
+}
+
+.team-box .member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.team-box .member .photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 4px solid var(--text-secondary);
+    box-shadow: 0 0 2rem 0.1rem var(--text-secondary);
+}
+
+.team-box .member .photo img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.team-box .member span {
+    color: var(--text-muted);
+}
+
+.team-box .member h3, .team-box .member span {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .team-box {
+        flex-direction: column;
+        overflow-y: scroll;
+        padding: 1rem;
+    }
+}
