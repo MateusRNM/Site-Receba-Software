@@ -11,6 +11,8 @@
     --card-border: #3d7979;
     --card-border-hover: #336e5b;
     --text-muted: #75888f;
+    --contact-icon: #77d08e;
+    --contact-span: #000000;
 }
 
 * {
