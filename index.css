@@ -35,7 +35,7 @@
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    transition: color 0.5s;
+    transition: all 0.3s;
 }
 
 .servicesBtn:hover {
@@ -46,7 +46,7 @@
 
 .effect {
     position: absolute;
-    bottom: -1rem;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;
