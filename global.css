@@ -7,6 +7,10 @@
     --navbar-bg: #02071a;
     --navbar-border: #0d1526;
     --grid-color: #00500099;
+    --card-bg: #0a2b32;
+    --card-border: #3d7979;
+    --card-border-hover: #336e5b;
+    --text-muted: #75888f;
 }
 
 * {
@@ -63,7 +67,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 5rem;
+    min-height: 5rem;
     padding: 0.5rem 6rem;
     border-bottom: 2px solid var(--navbar-border);
     background-color: var(--navbar-bg);
@@ -103,6 +107,15 @@
 
 .global-container .navbar .items .option.active {
     color: var(--text-secondary);
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
 }
 
 @media (max-width: 768px) {
