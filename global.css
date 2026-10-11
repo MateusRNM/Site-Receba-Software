@@ -6,6 +6,7 @@
     --bg-color: #020919;
     --navbar-bg: #02071a;
     --navbar-border: #0d1526;
+    --grid-color: #00500099;
 }
 
 * {
@@ -22,8 +23,39 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    perspective: 800px;
     overflow: hidden;
     background-color: var(--bg-color);
+}
+
+.global-container::before, .global-container::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  width: 60%;
+  height: 140%;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid-color) 2px, transparent 2px),
+    linear-gradient(90deg, var(--grid-color) 2px, transparent 2px);
+  background-size: 40px 40px;
+  z-index: -1;
+}
+
+.global-container::before {
+  left: 0;
+  transform-origin: left center;
+  transform: rotateY(70deg);
+  -webkit-mask-image: linear-gradient(to right, black 5%, transparent 90%);
+  mask-image: linear-gradient(to right, black 5%, transparent 90%);
+}
+
+.global-container::after {
+  right: 0;
+  transform-origin: right center;
+  transform: rotateY(-70deg);
+  -webkit-mask-image: linear-gradient(to left, black 5%, transparent 90%);
+  mask-image: linear-gradient(to left, black 5%, transparent 90%);
 }
 
 .global-container .navbar {
@@ -35,6 +67,7 @@
     padding: 0.5rem 6rem;
     border-bottom: 2px solid var(--navbar-border);
     background-color: var(--navbar-bg);
+    z-index: 1;
 }
 
 .global-container .navbar .navbar-logo {
@@ -80,5 +113,18 @@
 
     .global-container .navbar .navbar-logo {
         display: none;
+    }
+
+    .global-container::before, .global-container::after {
+        width: 70%;
+        background-size: 30px 30px;
+    }
+
+    .global-container::before {
+        transform: rotateY(75deg);
+    }
+
+    .global-container::after {
+        transform: rotateY(-75deg);
     }
 }
