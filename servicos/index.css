@@ -51,6 +51,17 @@
     color: var(--text-secondary);
 }
 
+@media (max-width: 1280px) {
+    .services-container .service-card {
+        width: 14.5rem;
+        height: 19rem;
+    }
+
+    .services-container .service-card h2 {
+        font-size: 1.3rem;
+    }
+}
+
 @media (max-width: 768px) {
     .title {
         margin: 1rem 0;
@@ -63,7 +74,7 @@
     }
 
     .services-container .service-card {
-        width: 15rem;
+        width: 14rem;
         height: 19rem;
     }
 }

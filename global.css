@@ -96,6 +96,7 @@
 .global-container .navbar .items .option {
     font-size: 0.95rem;
     text-decoration: none;
+    outline: none;
     transition: all 0.3s;
     cursor: pointer;
 }
